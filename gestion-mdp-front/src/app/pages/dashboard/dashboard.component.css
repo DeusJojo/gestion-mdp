@@ -1,0 +1,85 @@
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #1f293a;
+}
+
+.container {
+  width: 50%;
+}
+
+h1 {
+  color: white;
+}
+
+th {
+  color: #0ef;
+  font-size: 1.2em;
+}
+
+tr {
+  vertical-align: middle;
+}
+
+td .username:hover,
+td .password:hover {
+  cursor: pointer;
+  color: #0ef;
+  text-shadow: 0 0 5px #0ef;
+  transition: 0.5s;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+}
+.password {
+  display: flex;
+  align-items: center;
+}
+
+tr td div span {
+  margin-top: 5px;
+  padding-left: 5px;
+}
+
+.delete {
+  display: block;
+  border-radius: 50%;
+  color: #666;
+  transition: 0.5s;
+}
+
+.delete:hover {
+  color: red;
+  cursor: pointer;
+  text-shadow: 0 0 5px red;
+}
+
+.modify {
+  display: block;
+  border-radius: 50%;
+  color: #666;
+  transition: 0.5s;
+}
+
+.modify:hover {
+  color: #0ef;
+  cursor: pointer;
+  text-shadow: 0 0 5px #0ef;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-container .delete {
+  margin-right: 1em;
+}
+
+.add {
+  vertical-align: middle;
+}

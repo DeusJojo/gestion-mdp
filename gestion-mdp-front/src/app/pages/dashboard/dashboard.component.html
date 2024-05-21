@@ -1,0 +1,76 @@
+<div class="parent">
+  <div class="container mt-3">
+    <h1>Vos mots de passe</h1>
+
+    <!-- Modal button -->
+    <button
+      (click)="open('Ajouter un mot de passe', 'Ajouter')"
+      type="button"
+      class="btn btn-outline-blue mb-2"
+    >
+      <div>
+        Ajouter
+        <mat-icon class="add">add</mat-icon>
+      </div>
+    </button>
+
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>Identifiant</th>
+          <th>Mot de passe</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(manager of managers; track manager){
+        <tr>
+          <td>
+            <div class="username">
+              <mat-icon class="mat">person</mat-icon>
+              <span>{{ manager.usernameApp }}</span>
+            </div>
+          </td>
+          <td>
+            <div
+              class="password"
+              title="Voir le mot de passe"
+              (click)="
+                manager.isEncrypt ? decryptAll(manager.id) : encrypt(manager.id)
+              "
+            >
+              @if(manager.isEncrypt){
+              <mat-icon class="mat">lock</mat-icon>
+              } @else {
+              <mat-icon class="mat">lock_open</mat-icon>
+              }
+              <span>{{ manager.passwordApp }}</span>
+            </div>
+          </td>
+          <td>
+            <div class="icon-container">
+              <mat-icon
+                (click)="deleteManager(manager.id)"
+                class="delete"
+                aria-hidden="true"
+                >delete</mat-icon
+              >
+              <mat-icon
+                (click)="open('Modifier un mot de passe', 'modifer', manager)"
+                class="modify"
+                aria-hidden="true"
+                >create</mat-icon
+              >
+            </div>
+          </td>
+        </tr>
+        } @empty {
+        <tr>
+          <p>Aucun mot de passe trouvé.</p>
+        </tr>
+        }
+      </tbody>
+    </table>
+    <app-modal (getAllManagers)="getAllManagers()"></app-modal>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+
+r	java:S106%"+Replace this use of System.out by a logger.(•τάϋÿÿÿÿ8ΔΉι®ξ1J$f9756e65-a780-4410-bde9-5df7b85d1781
+~	java:S125&"<This block of commented-out lines of code should be removed.(ζΆ·8ΕΉι®ξ1J$94216b3f-45ec-4a7c-8bb7-9387fe653b7e
+
+java:S2147="DCombine this catch with the one at line 56, which has the same body.(χΏ­Ήÿÿÿÿÿ8ΗΉι®ξ1J$6f5a6a8f-5424-41e8-83bd-cafe9182beb4
+r	java:S106c"+Replace this use of System.out by a logger.(ΈΥώÿÿÿÿ8ΪΉι®ξ1J$779c492a-980d-4249-bb85-d5f52b0d11a7
+y
+java:S6437e"6Revoke and change this password, as it is compromised.(ήΎΒΫ8ΫΉι®ξ1J$79beb07c-5a3e-4958-9061-11141db677ad

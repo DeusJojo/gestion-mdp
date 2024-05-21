@@ -1,0 +1,67 @@
+<!-- The Add Modal -->
+<div #modal class="modal" id="addModal">
+  >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header" data-bs-theme="dark">
+        <h4 class="modal-title">{{ title }}</h4>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Identifiant</span
+          >
+          <input
+            [(ngModel)]="managerObj.usernameApp"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        <br />
+        <div class="input-group input-group-sm mb-3">
+          <span class="input-group-text" id="inputGroup-sizing-sm"
+            >Mot de passe</span
+          >
+          <input
+            [(ngModel)]="managerObj.passwordApp"
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+        </div>
+        @if(validator){
+        <div class="invalid-logs">Veuillez renseigner un mot de passe</div>
+        }
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button
+          (click)="closeModal()"
+          type="button"
+          class="btn btn-outline-red"
+        >
+          Fermer
+        </button>
+        <button
+          (click)="validButton === 'Ajouter' ? addManager() : modifyManager()"
+          type="button"
+          class="btn btn-outline-blue"
+        >
+          {{ validButton }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
